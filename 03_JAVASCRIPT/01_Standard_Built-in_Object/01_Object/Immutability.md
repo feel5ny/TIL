@@ -1,3 +1,4 @@
+
 ## 예상대로 값이 변경되지 않고 출력되었을 때
 
 ```js
@@ -85,4 +86,11 @@ console.log(o4);     // { a: 1 }
 
 ### 불변객체화를 통한 객체 변경 방지
 `Object.freeze`
+불변객체로 만들 수 있다.<br>
+내부객체까지 변경 불가능하게 만들려면
+Deep Freeze해야한다. 
 
+### Object.assign과 Object.freeze의 사용성
+번거로울 뿐더러 성능상 이슈가 있어서 큰 객체에서는 사용하지 않는 것이 좋다. <br>
+Facebook이 제공하는 Immutable.js를 활용하는 방법이 있다. 
+Immutable.js는 List, Stack, Map, OrderedMap, Set, OrderedSet, Record와 같은 영구 불변 (Permit Immutable) 데이터 구조를 제공한다.
