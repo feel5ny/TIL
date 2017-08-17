@@ -1,0 +1,11 @@
+{
+  "name": "0817",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "json-server": "^0.12.0"
+  },
+  "scripts": {
+    "json": "json-server --watch public/DB/data.json --port 3333"
+  }
+}
