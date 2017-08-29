@@ -77,3 +77,19 @@ const list =["apple","orange","watermelon"];
 list2 = [].concat(list,"banana");
 console.log(list,list2);
 ```
+
+
+## ES6 String의 새로운 메서드
+
+1. `startWith()`
+2. `endsWith()`
+3. `includes()`
+> 모두 불린값으로 반환
+
+```js
+let str ="hello world~ ^^ ~~";
+let matchstr = "hello";
+console.log(str.startsWith(matchstr)); // 불린값
+console.log(str.endsWith(matchstr));
+console.log(str.includes("^^"));
+```
