@@ -27,9 +27,9 @@ for(let value of data){
 - `for in` : 문제점이 많다.
 
 <ES6에서 나온 순회방법>
-`for of`
-- 문자열에서는 한글자씩 순회한다.
-- 배열에서 순회할때 사용한다.
+- `for of`
+  - 문자열에서는 한글자씩 순회한다.
+  - 배열에서 순회할때 사용한다.
 
 ## spread operator
 <펼침 연산자 = spread operator>
@@ -43,7 +43,7 @@ console.log(pre, newData);
 기존의 참조를 끊고, 메모리의 새로운 공간에 복사되어서 새로운 객체가 생성된 것이다. 
 
 ```js
-[...pre]; // 펼쳐준다고 생각하면 기억하기 슆다.
+[...pre]; // 펼쳐준다고 생각하면 기억하기 쉽다.
 ```
 
 ## spread operator 몇가지 활용
