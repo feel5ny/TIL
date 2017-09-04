@@ -1,0 +1,374 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;    
+}
+
+.wrapper{
+  width: 1140px;
+  max-width: 1140px;
+  min-width: 1140px;
+  margin: 0 auto;
+}
+a{
+  text-decoration: none;
+  color:#666;
+}
+
+li{
+  list-style: none;
+}
+
+header{
+  /* padding: 20px 0px 20px 0px; */
+  margin-top: 50px;
+  line-height: 80px;
+  /* background-color:lightcoral; */
+  
+}
+
+/****************************
+  header 내부에 있는 요소에 float지정
+    h1 logo에 float:left,
+    ul에 float:left 지정
+    log에 float:right 지정
+
+  때문에 부모요소인 header에 clearfix 적용
+****************************/
+header:after{
+  content:"";
+  display: block;
+  clear:both;
+}
+
+header > img{
+
+}
+
+
+header > h1 {
+  margin-right:10px;
+  display: inline-block;
+  float: left; 
+}
+
+header > ul {
+  font-size: 15px;
+  display: inline-block; 
+  float: left;
+}
+
+header > ul > li{
+  display: inline-block; 
+  width : 69px;
+  text-align: center;
+  margin-left:6px;
+};
+
+
+/****************************
+ ul를 nav로 한번 더 감싼 상황 
+****************************/
+/* header > ul > li > a{
+  padding : 15px 0px 23px 0px;   
+}; */
+
+/* header > nav{
+  display: inline-block;
+}
+
+header > h1 {
+  margin-right:10px;
+   display: inline-block; 
+}
+
+header > nav > ul {
+
+}
+
+header > nav > ul > li{
+  display: inline-block; 
+  width : 69px;
+  text-align: center;
+} */
+
+.headerLog{
+  float: right;
+   font-size: 15px; 
+  /* width: 80px; */
+}
+.log{
+  float:right;
+}
+
+.logIn{
+  border-radius: 4px;
+  border: none;
+  background-color: rgba(0,0,0,0);
+  width: 80px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.signUp{
+  padding: 10px;
+  width: 125px;
+  background-color: rgba(0,0,0,0);
+  color: #03a67b;
+  font-size: 15px;
+  border-radius: 4px;
+  border: 1px solid #03a67b;
+  cursor: pointer;
+  vertical-align: middle;
+}
+/****************************
+  font를 적용했을 때 문제가 생길 경우 vertical-align을 사용하면 해결할 수 있다.
+  signUp에서 button안에 글씨를 키웠더니 높이값이 내려가서 vertical-align에 middle을 주어서 해결하였다.
+****************************/
+
+/* main 시작 */
+main{
+  position: relative;
+  border-bottom: 1px solid #ebebeb;
+}
+
+main:after{
+  content:"";
+  display:block;
+  clear:both;
+}
+
+.mainLeft{
+  width: 50%;
+  padding-right: 40px;
+  position: absolute; 
+  top:50%; 
+  float:left;
+  transform: translateY(-50%); 
+  /****************************
+    여기서 translateY의 역할은 해당 더미의 중심점을 중심으로 옮기는 의미이기도 하다. 
+  ****************************/
+} 
+
+h2.mainLeftTitle{
+  font-size:52px;
+}
+
+p.mainLeftDescription{
+  font-size:16px;
+  color:rgba(0,0,0,0.6);
+  line-height: 24px;
+   margin-bottom : 15px; 
+}
+/* .mainLeftContents{
+  height: 100%;
+  float:left;
+} */
+
+
+
+.mainRight{
+  text-align: center;
+  width: 50%; 
+  float:right;
+  padding: 26px;
+  margin-bottom:64px;
+}
+
+.mainLeftForm:after{
+  content: "";
+  display: block;
+  clear:both;
+}
+
+.mainEmailInput{
+  width:290px;
+  float:left;
+  background-color: rgba(0,0,0,0.05);
+  border:none;
+  padding: 20px;
+  font-size: 14px;
+  border-radius: 4px 0px 0px 4px;
+}
+
+.mainEmailSubmit{
+  width: 200px;
+  float:left;
+  background-color: #03a67b;
+  border: none;
+  padding: 20px;
+  font-size: 14px;
+  letter-spacing: 5px;
+  color:white;
+  border-radius: 0px 4px 4px 0px;
+  cursor: pointer;
+}
+
+
+/* main 종료 */
+
+
+/* Features 시작 */
+.features{
+  text-align: center;
+  margin-top:100px;
+}
+h2.sectionTitle{
+  font-size: 44px; 
+  font-weight: 600;
+  margin-bottom: 27px;
+}
+
+p.ClientsDescrip,
+p.featureDescrip{
+  font-size: 16px;
+  color: rgba(51,51,51,0.5);
+  width: 50%;
+   margin: 0 auto; 
+  margin-bottom:30px;
+}
+
+ul.clientsBranch,
+ul.featureBranch{
+  padding-bottom: 100px;
+}
+
+ul.clientsBranch >li,
+ul.featureBranch >li{
+  width: 33%; 
+  display: inline-block;
+  padding :30px;
+}
+
+li.featureSubTitle,
+li.ClentsName{
+  font-size: 14px;
+  letter-spacing: 5px;
+  font-weight: 800;
+  margin-top:30px;
+}
+
+li.featureSubDescrip,
+li.ClientsDescrip{
+  font-size:16px;
+  color: rgba(51,51,51,0.5);
+  line-height: 24px;
+  margin-top:20px;
+}
+
+/* Features 종료 */
+
+/* wireframeKit 시작 */
+.wireframeKit{
+  margin-top:100px;
+  text-align: center;
+  padding-bottom:100px;
+  margin-bottom: ;
+  border-bottom: 1px solid #ebebeb;
+}
+
+h2.wireframeKitTitle{
+  font-size: 44px;
+  margin-bottom: 34px;
+}
+
+
+/* wireframeKit 종료 */
+
+
+/* Try it Now 시작  */
+.tryItNow{
+  margin-top:100px;
+  text-align: center;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.btn{
+  font-size: 12px;
+  letter-spacing:5px;
+  border-radius: 4px;
+}
+.colorBtn{
+  border:none;
+  background-color: #03a67b;
+  color: white;
+}
+
+.borderBtn{
+  border: 2px solid #03a67b;
+  color: #03a67b;
+  background-color: white;
+}
+
+/****************************
+ * input 간격 줄이는 방법 *
+  방법1) input 과 버튼에 float 을 주고 부모요소에 플롯해제
+  방법2) input 과 버튼 부모요소에 font-size: 0; 을 주고
+        input 과 버튼에 font-size 제 선언
+  방법3) 부모요소에 display: flex 
+****************************/
+form{
+  font-size:0;
+  padding-bottom: 100px;
+}
+
+input.firstBtn{
+  width: 200px;
+  height: 50px;
+  margin-right:15px;
+}
+input.secondBtn{
+  width: 200px;
+  height: 50px;
+}
+
+
+/* Try it Now 종료  */
+
+
+/* Client 시작 */
+.Clients{
+  border-bottom: 1px solid #ebebeb;
+  text-align: center;
+  margin-top:100px;
+}
+
+.ClientsJob{
+  font-size: 16px;
+  color: #ebebeb;
+  margin-top:10px;
+}
+
+li.ClientsDescrip{
+  margin-top: 10px;
+}
+
+ /* Client 종료 */
+
+
+/* footer 시작 */
+footer{
+  padding : 70px 0px 70px 0px;
+  overflow:hidden;
+}
+
+footer > img{
+  float:left;
+  margin-right: 268px;
+}
+footer > ul{
+  float:left;
+}
+
+footer > ul >li{
+  display: inline-block;
+  margin-left: 20px;
+  font-size:14px;
+  color:#333;
+}
+
+ul.social{
+  float:right;
+}
+
+/* footer 종료 */
