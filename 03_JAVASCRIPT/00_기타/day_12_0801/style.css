@@ -1,0 +1,94 @@
+*{
+  margin:0;
+  padding:0;
+  color:white;
+}
+
+/****************************
+ < 첫 생각 >
+  1. 가로는 길이 n, 세로는 2n으로 위쪽에는 n*n크기의 이미지, 레이어 아래는 블랙화면으로 둔다.
+  2. 블랙 레이어 하단에는 글자를 넣는다.
+  3. 윗부분 정사각형으로 마스킹한다. 
+  4. 애니메이션
+    > 트리거 : 이미지 hover
+      1. 이미지 투명도 1 > 0
+      1. 동시에 이미지가 n만큼 올라감.
+
+ < 조교님께 물어보고 다시 순서 >
+  >> 마스킹이 아니라 overflow:hidden을 사용한다.
+  1. 마스킹 역할을 하기 위해 div로 보이는 영역을 지정한 후 해당 div에 overflow:hidden을 사용한다.
+  2. mouse hover시 아래의 이미지가 올라와야하므로, 사진과 블랙솔리드를 수직정렬한다.
+  3. :hover
+    3.1 img자체에 hover를 하면 블랙솔리가 묶여올라오지 않는다.
+    3.2 img와 블랙 솔리드를 div로 한번더 묶는다.
+    3.3 묶은 div(.move)에 :hover적용
+  4. mouse off할때는 되돌아가야한다.
+    4.1 :hover가 적용된 요소에는 'hover이후의 결과값만 명시한다.'
+    4.2 적용될 요소에 '동작규칙'을 설정한다. 
+        '만약 트리거가 작동된다면, 트리거가 걸려있는 요소의 결과값으로 변화하는데 00시간동안 00속도로 변화한다.'를 명시한다 (transition : all 2s ease-in)
+****************************/
+
+
+
+h1{
+  text-align : center;
+  margin-top: 100px;
+  margin-bottom: 50px; 
+  color: black;
+}
+
+.photo{
+  margin: 0 auto; 
+  position: relative;
+  width: 400px;
+  height: 398px; 
+  overflow: hidden;
+ /* clip: rect(0px, 0px, 0px, 0px); */
+ /* background-color: black; */
+ 
+}
+ 
+.move{
+  background-color: black;
+  width:100%;
+  height: 800px;
+  float: left;
+  position:absolute;
+  transition: transform 2s ease-in-out; 
+}
+
+.move:hover{
+  transform: translateY(-50%);
+}
+
+
+.move:hover > img{
+  opacity: 0;
+}
+
+img{
+  width:100%;
+  position: absolute;
+  z-index: 1;
+  transition: opacity 2s ease-in-out;
+}
+
+
+.second{
+  position: relative; 
+  float: left;
+  margin: 0 auto; 
+  background-color: black;  
+  width:100%;
+  height:100%; 
+}
+
+
+
+
+.secondTypo{
+  position: absolute;
+  bottom : 0;
+  padding: 20px;
+  line-height: 30px;
+}
