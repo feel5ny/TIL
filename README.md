@@ -16,7 +16,7 @@ Today I Learned
 
 
 
-### html, css, 자바스크립트
+### html, css, 자바스크립트 &#127925;
 [프론트엔드 개발자를 위한 자바스크립트 프로그래밍]책과 http://poiemaweb.com/ 자료로 공부 후 정리한 내용입니다.
 
 | # | 날짜     | 카테고리               | 배운 내용                                   | 실습 |
@@ -25,21 +25,16 @@ Today I Learned
 | 28 | [20170824]() | BookList 실습 | BookList 실습 | | 
 | 27 | [20170823](https://github.com/feel5ny/toy_practice) | BookList 실습 | JavaScript 총정리 | | 
 | 26 | [20170822]() | ES6 | Destructuring, Class, Module |  |
-| 25 | [20170821]() | ES6 | ES6 - Block-level scope, Arrow function, Template String,
-Extended Parameter Handling |  |
+| 25 | [20170821]() | ES6 | ES6 - Block-level scope, Arrow function, Template String, Extended Parameter Handling |  |
 | 24 | [20170818]() | 컴퓨터공학수업 | REST API, Socket, Websocket(SocketIO) | |
 | 23 | [20170817](https://github.com/feel5ny/toy_todoList) | ToDoList |  |  |
 | 22 | [20170816]() | Javascript | jQuery Basics, Ajax & JSON |  |
-| 21 | [20170814]() | Javascript | JavaScript DOM, Asynchronous processing model
-Ajax, Event  | |
-| 20 | [20170811]() | 컴퓨터공학수업 | 네트워크(개념, 용어 정리, HTTP, TCP/IP 프로토콜, OSI 7 Layers)
-웹의 이해(WWW, 웹 연대기) | |
+| 21 | [20170814]() | Javascript | JavaScript DOM, Asynchronous processing model Ajax, Event  | |
+| 20 | [20170811]() | 컴퓨터공학수업 | 네트워크(개념, 용어 정리, HTTP, TCP/IP 프로토콜, OSI 7 Layers) 웹의 이해(WWW, 웹 연대기) | |
 | 19 | [20170810]() | 함수 프로그래밍 실습 |  | |
 | 18 | [20170809]() | Javascript | Date, String, RegExp, Array | |
-| 17 | [20170808]() | Javascript | OOP, Buit-in Object, 
-Standard Built-in Objects, Number, Math | |
-| 16 | [20170807](03_JAVASCRIPT/00_기타/0807/0807.md) | Javascript | SassScript, Built-in Function, CSS Extensions, 
-Execution Context, Closure | |
+| 17 | [20170808]() | Javascript | OOP, Buit-in Object, Standard Built-in Objects, Number, Math | |
+| 16 | [20170807](03_JAVASCRIPT/00_기타/0807/0807.md) | Javascript | SassScript, Built-in Function, CSS Extensions, Execution Context, Closure | |
 | 15 | [20170804](03_JAVASCRIPT/00_기타/0804/0804.md) | 컴퓨터공학수업 | 소프트웨어 공학, 개발 방법론(Agile), 소프트웨어 품질 관리 | |
 | 14 | [20170803](03_JAVASCRIPT/00_기타/0803/0803.md) | Javascript | Prototype, Scope, this, Sass Basics | |
 | 13 | [20170802](03_JAVASCRIPT/00_기타/0802/0802.md) | Pair Programming |  | |
@@ -50,11 +45,8 @@ Execution Context, Closure | |
 | 08 | [20170726](02_CSS/0726/0726.md) | Pair Programming |  | |
 | 07 | [20170725](02_CSS/0725/0725.md) | CSS3 | Layout, Responsive Web Design | |
 | 06 | [20170724](02_CSS/0724/0724.md) | CSS3 | Inheritance & Cascading, Effect, Web Font | |
-| 05 | [20170721]() | 컴퓨터공학수업 | 컴퓨터의 이해(운영체제, 메모리, 데이터베이스, SQL)
-소스코드 관리(git, github) | |
+| 05 | [20170721]() | 컴퓨터공학수업 | 컴퓨터의 이해(운영체제, 메모리, 데이터베이스, SQL) 소스코드 관리(git, github) | |
 | 04 | [20170720](01_HTML/0720/0720.md) | CSS3 | Display, Background, Font & Text, Position, Float | |
 | 03 | [20170719]() | CSS3 | Syntax, Selector, Units, Box Model | |
-| 02 | [20170718]() | HTML5 | Link, List & Table, Image & Multimedia,
-Forms, Structure, Semantic Web | |
-| 01 | [20170717](01_HTML/0717/0717.md) | HTML5 | 개발 환경 구축(Chrome/VScode)
-HTML5 Syntax, Tag - Basic, Text | |
+| 02 | [20170718]() | HTML5 | Link, List & Table, Image & Multimedia, Forms, Structure, Semantic Web | |
+| 01 | [20170717](01_HTML/0717/0717.md) | HTML5 | 개발 환경 구축(Chrome/VScode) HTML5 Syntax, Tag - Basic, Text | |
