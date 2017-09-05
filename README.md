@@ -1,7 +1,7 @@
 # TIL &#9997; &#10024;
 Today I Learned
 
-### Node.js &#128171;
+## Node.js &#128171;
 책과 https://seungha-kim.github.io/wpsn-handout/ 자료로 공부 후 정리한 내용입니다.
 
 | #   | 날짜     | 카테고리               | 배운 내용                                   | 실습 |
@@ -14,9 +14,9 @@ Today I Learned
 | 31 | [20170829](06_NodeJS/0829/0829.md) | 처음 만나는 Node.js | HTTP / Express / Template Language |  |
 | 30 | [20170828](06_NodeJS/0828_nodeJS.md) | 처음 만나는 Node.js | REST API실습 / Node.js / Asynchronous Javascript | |
 
+<hr>
 
-
-### html, css, 자바스크립트 &#127925;
+## html, css, 자바스크립트 &#127925;
 [프론트엔드 개발자를 위한 자바스크립트 프로그래밍]책과 http://poiemaweb.com/ 자료로 공부 후 정리한 내용입니다.
 
 | # | 날짜     | 카테고리               | 배운 내용                                   | 실습 |
