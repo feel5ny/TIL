@@ -2,6 +2,11 @@
 Today I Learned
 
 ### Node.js
+| 날짜     | 정리 문서               | 배운 내용                                   | 실습 |
+| :------- | :--------------------: | :---------------------------------------: | ---: |
+| 20170905 | 모던 웹 서비스의 구성요소 | Ajax / CORS / JWT / Fetch API             |      |
+| 20170904 | 모던 웹 서비스의 구성요소 | Express Middleware / Cookie / Session     |      |
+| 20170901 | 컴퓨터 공학 실습         | 자료구조(stack, queue), Task Runner(Gulp)  |      |
 
 36_ 0905 : <br>
 35_ [0904](06_NodeJS/0904/0904.md) : Express Middleware / Cookie / Session <br>
