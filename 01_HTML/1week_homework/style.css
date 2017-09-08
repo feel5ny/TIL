@@ -1,0 +1,414 @@
+*{
+  margin:0px;
+}
+h1,h2,h3{
+  color:#666;
+  font-weight: 200;
+}
+ul{
+  padding:0px;
+}
+
+.container{
+  width: 900px;
+  margin: auto;
+  position: relative;
+
+}
+
+
+.header_top{
+  box-sizing:border-box;
+  height: 62px;
+  padding-top:16px;
+  padding-bottom:14px;
+  background: #1f8ce6
+}
+
+
+form{
+  display: inline-block;
+}
+
+.form-inline{
+  margin-left:20px;
+}
+
+.search_field{
+  box-sizing: border-box;
+  width:265px;
+  height:30px;
+  background-color:white;
+  border-radius: 3px;
+  border:none;
+  padding:6px;
+  color:#1f8ce6;
+}
+
+.form-control{
+  padding-left:30px;
+  border:none;
+  position:absolute;
+  font-size:13px;
+  
+}
+
+/* 가상요소셀렉터 사용 */
+.form-control::placeholder{
+  color:#1f8ce6;
+}
+
+.icon-search{
+  position:absolute;
+  padding-left: 3px;
+}
+
+.top_right{
+  /* background-color: red; */
+  display: inline-block;
+  position:absolute;
+  right:0px;
+  height: 32px;
+}
+
+
+.top_right > ul{
+  padding-top:7px;
+}
+
+.top_right > ul >li{
+  display: inline;
+  padding-left:10px;
+  font-size: 18px;
+  font-weight: 600;
+  color:white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,.3);
+}
+/* header top 종료 */
+
+
+/* header middle 시작 */
+.header_middle{
+  height: 47px;
+  box-sizing: border-box;
+  padding: 14px 0;
+  border-bottom: 1px solid lightgray;
+}
+
+.middle_left{
+  display: inline-block;
+}
+.middle_left > ul > li {
+  display: inline;
+  padding-right:15px;
+  font-weight: 600;
+  color:#666;
+}
+.middle_left_icon > img{
+  width: 15px;
+  padding-right:3px;
+}
+
+.middle_right{
+  display: inline-block;
+  right: 0px;
+  position:absolute;
+}
+
+.middle_right > ul{
+  margin: 0px;
+}
+
+.middle_right > ul > li {
+  display: inline;
+  padding-left:10px;
+}
+/* header middle 종료 */
+
+
+/* sub_service 시작 */
+.category_sub_service{
+  height: 39px;
+  box-sizing: border-box;
+  /* padding: 11px 0; */
+  border-bottom: 1px solid lightgray;
+  background-color: #f7fafc;
+  font-size: 13px;
+}
+
+.sub_service > ul{
+  padding-top: 10px;
+}
+
+
+.sub_service > ul > li {
+  display: inline-block;
+  padding-right:10px;
+  color: #666;
+  height:39px;
+}
+
+a{
+  text-decoration: none;
+  color:#666;
+}
+
+.filter_link{
+  height: 27px;
+
+}
+
+.filter_link.active{
+  color:#1f8ce6;
+  border-bottom: 2px solid #1f8ce6;
+  display: block;
+}
+
+/* 메인 히어로 이미지 작업 시작*/
+.main_gall_general{
+  background-color: #1c2c4e;
+  height: 320px;
+}
+
+.card{
+  background-image: url('/assets/top_banner/1499847500.jpg');
+  background-size: cover;
+  height: 320px; 
+  background-position-x: 100%;
+}
+
+.rolling_list{
+  position: relative;
+  padding-top:15px;
+}
+.rolling_list > a{
+  padding-left: 600px;
+  padding-top:1px;
+  display:block;
+  height: 47px;
+}
+
+.rolling_list > a > img{
+  width: 300px;
+  opacity: 0.8;
+}
+
+.rolling_list > a > img:hover{
+  opacity: 1;
+}
+
+/* 오늘의 추천 시작 */
+.today_recommended{
+  height: 352px;
+  z-index:0; 
+}
+#book_title{
+  font-weight: 400;
+  text-align: center;
+  padding:15px 0px 15px 0px;
+}
+
+.today_recommended > h2{
+  text-align: center;
+  padding-top: 40px;
+}
+
+.today_recommended_card > ul{
+  display: flex;
+  Justify-content:space-between;
+  padding-top:15px;
+}
+
+.today_recommended_card > ul > li{   
+  list-style: none;
+}
+
+
+.today_recommended_card > ul > li > img{
+  display: inline-block;
+  width:145px;
+}
+.today_recommended_card > ul > li > img:hover{
+  display: inline-block;
+  width:145px;
+  margin-top: -6px;
+  transition: margin-top 0.2s ease;
+}
+.today_recommended_card_mask{
+  background-color: white;
+  position:relative;
+  height: 20px;
+  top:-20px;
+}
+
+
+/* 오늘의 추천 종료 */
+
+
+
+/* 테마별 네비게이션 */
+.home_specialroom{
+  height: 50px;
+  background-color: white;
+}
+
+.specialroom_wrapper{
+  background-color: white;
+  font-weight: 600;
+  margin-top:30px;
+  
+}
+.specialroom_wrapper>ul{
+  border:2px solid black;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  height: 46px;
+  margin-top: 10px;
+  align-items: center;
+}
+.specialroom_wrapper > ul > li{
+   text-align: center;
+   padding:6px;
+   height: 45px;
+   width:40%;
+   box-sizing: border-box;
+   border-left:1px solid lightgray;
+}
+
+.specialroom_wrapper > ul>li:nth-child(1){
+   border-left:none;
+}
+
+.specialroom_wrapper > ul > li>span{
+   padding-top:2px;
+   display: inline-block;
+}
+
+.specialroom_wrapper > ul > li>span>img{
+  /* padding-top:2px; */
+   width:20px;
+   position:relative;
+   top:4px;
+}
+
+.specialroom_wrapper > ul > li>span>a:hover{
+   color: #1f8ce6;
+}
+
+
+
+
+/* 가장 많이 읽고 있는 책 */
+.home_most_popular{
+  height: 90px;
+  margin-top:15px;
+}
+
+.most_popular_theme{
+  border: 1px solid #ccc;
+  height: 90px;
+}
+
+
+
+
+/* 주간베스트셀러 */
+.home_best{
+  height: 620px;
+  background-color: lightgoldenrodyellow;
+}
+
+/* md추천신간 */
+.books_block_wrapper{
+  height: 312px;
+}
+#md_title{
+  display: : inline-block;
+}
+#md_hr{
+  display: inline-block;
+  /* height: 1px; */
+  padding-bottom: 5px;
+  margin-left:30px;
+  width:85%;
+  right:0px;
+  border-top:1px solid lightgray;
+}
+
+#book_title_md{
+  font-weight: 600;
+  padding:15px 0px 6px 0px;
+}
+
+#book_subtitle_md{
+  font-weight: 100;  
+}
+
+#book_subtitle_md_review{
+  font-weight: 100;  
+  font-size: 12px;
+}
+
+.books_block_wrapper_card > h2{
+  text-align: center;
+  padding-top: 40px;
+}
+
+.books_block_wrapper_card > ul{
+  display: flex;
+  Justify-content:space-between;
+  padding:15px;
+}
+
+.books_block_wrapper_card > ul > li{   
+  list-style: none;
+}
+
+
+.books_block_wrapper_card > ul > li > img{
+  display: inline-block;
+  width: 100px;
+}
+
+.ratings {
+  padding-top:10px;
+  display: inline-block;
+  color:orange;
+}
+
+
+/* md 계절 추천 */
+.md_selection{
+  height: 308px;
+
+}
+
+#viewall{
+  border:none;
+  background-color: black;
+  color:white;
+  padding:10px 20px 10px 20px;
+  margin-left:28px;
+}
+#md_season_hr{
+  display: inline-block;
+  /* height: 1px; */
+  padding-bottom: 5px;
+  margin-left:30px;
+  width:55x%;
+  border-top:1px solid lightgray;
+}
+
+
+.module_notice{
+  height: 44px;
+  background-color: lightcoral;
+}
+
+.books_footer{
+  height: 292px;
+  background-color: lightseagreen;
+}
+
+
