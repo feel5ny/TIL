@@ -1,0 +1,23 @@
+*{
+  background-color: darkslategray;
+}
+li{
+  display:inline;
+  margin: 10px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.visible {
+  visibility: visible;
+}
+.hidden {
+  visibility: hidden;
+}
+
+table, td {border: 1px solid black;}
+ .collapse {visibility: collapse;} 
