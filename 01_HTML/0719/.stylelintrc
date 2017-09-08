@@ -1,0 +1,7 @@
+{
+  "extends": "stylelint-config-standard",
+   "rules": {
+     // Add your rules 
+     // Rules: https://stylelint.io/user-guide/rules/
+   }
+}

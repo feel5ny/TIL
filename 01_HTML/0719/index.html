@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    p:first-of-type {color:tomato;}
+    p:last-of-type {color:blue}
+    p:nth-of-type(2) {color:blueviolet}
+    p:nth-last-of-type(2){color:orange}
+    p:first-child{background:greenyellow;}
+
+    input:not([type=password]) {
+      background: tomato;
+    }
+
+    body{
+      margin:0;
+    }
+    .another {
+      float: left;
+      width: 32%;
+      height: 200px;
+      background-color: red;
+      margin-bottom: 2%;
+      color: tomato;
+      font-size: 3em;
+      line-height: 200px;
+      text-align: center;
+    }
+
+    div:not(:nth-of-type(3n-2)){
+      margin-left: 2%;
+    }
+  </style>
+</head>
+<body>
+  <div class="another">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>
+
+
+  <h1>this is a heading.</h1>
+  <p>The first paragraph.</p>
+  <p>The second paragraph.</p>
+  <p>The third paragraph.</p>
+  <p>The fourth paragraph.</p>
+  <div>
+    <h1>this is a heading.</h1>
+    <p>The first paragraph.</p>
+    <p>The second paragraph.</p>
+    <p>The third paragraph.</p>
+    <p>The fourth paragraph.</p>
+  </div>
+
+<!-- 부정셀렉터 -->
+  <input type="text" value="Text input">
+  <input type="email" value="email input">
+  <input type="password" value="Password input">
+</body>
+</html>

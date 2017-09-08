@@ -1,0 +1,51 @@
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    a[href^="col-1"]{
+      border-bottom : 2px solid white;
+    }
+    div:not(:nth-of-type(n)) {
+      margin-left: 2%;
+    }
+    /* div 요소 중에서 4번째 이후 등장하는 요소가 아닌 요소만을 선택 */    
+    div:not(:nth-of-type(n+6)) {
+      margin-bottom: 2%;
+    }
+    div {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>프론트엔드 5기 <strong>김나영</strong></ul>
+    <ul>
+      <li><a href="col-1.html">01</a></li>
+      <li><a href="col-2.html">02</a></li>
+      <li><a href="col-3.html">03</a></li>
+      <li><a href="col-4.html">04</a></li>
+      <li><a href="col-5.html">05</a></li>
+      <li><a href="col-6.html">06</a></li>
+    </ul>
+  </nav>
+
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</body>
+</html>
+
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+
+
+
