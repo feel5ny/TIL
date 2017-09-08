@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    table, th {
+      border : 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <menu id="demo-image" type="context">
+    <menu label="Image Rotation">
+        <menuitem onclick="imageRotation('rotate-90')" icon="img/arrow-return-090.png">Rotate 90</menuitem>
+        <menuitem icon="img/arrow-return-180.png">Rotate 180</menuitem>
+        <menuitem icon="img/arrow-stop-180.png">Flip Horizontally</menuitem>
+        <menuitem icon="img/arrow-stop-270.png">Flip Vertically</menuitem>
+    </menu>
+  </menu>
+
+
+  <form action="url" method="get">
+    <h3>통학 수단을 선택하세요</h3>
+    <input list="trans" name="means">
+    <datalist id="trans">
+      <option value="bus">
+      <option value="watch">
+      <option value="bicycle">
+      <option value="walk">
+    </datalist>
+    <input type="submit">
+  </form>
+  <label>Click me <input type="text"></label>
+  <select>
+    <optgroup label="Group 1">
+    <option>Option 1.1</option>
+    </optgroup> 
+    <optgroup label="Group 2">
+      <option>Option 2.1</option>
+      <option>Option 2.2</option>
+    </optgroup>
+    <optgroup label="Group 3" disabled>
+      <option>Option 3.1</option>
+      <option>Option 3.2</option>
+      <option>Option 3.3</option>
+    </optgroup>
+  </select>
+</body>
+</html>

@@ -1,0 +1,78 @@
+body {
+  background-color: lightgoldenrodyellow;
+}
+
+.main {
+  margin : 0 auto;
+  padding: 20px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse; 
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+}
+
+.score {
+  text-align: left;
+}
+
+input.upload {  
+  opacity: 0;       /*input type="file" tag 투명하게 처리*/
+  position: relative;
+}
+button.replace {    /*button tag 에 원하는 스타일 적용*/
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  border-radius: 3px;
+  font-weight: 600;
+  border-color: transparent;
+  font-size: 25px;
+  background: hotpink;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
+
+
+/* 과제 */
+
+body {
+      margin: 0;
+      background-color: tomato;
+}
+div {
+  float: left;
+  height: 200px;
+  background-color: ivory;
+  /* margin-bottom: 2%; */
+  color: tomato;
+  font-size: 3em;
+  line-height: 200px;
+  text-align: center;
+}
+
+nav > ul > li > a{
+  text-decoration: none;
+  color : white;
+}
+
+nav ul li {
+  display: inline;
+  padding: 10px;
+}
+nav {
+  padding: 30px;
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+}
+
+
