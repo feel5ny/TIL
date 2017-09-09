@@ -69,8 +69,23 @@ http프로토콜 안에 내장되어있는 기본적인 방법
   - 파일의 크기가 크다면 파일을 업로드하는데 1분이상의 시간이 걸릴 수 있다. 파일 업로드를 완료하기 전에 서버에 있는 다른 파일의 정보를 확인하거나 파일업로드가 어떻게 진행되고 있는지 요청하는 것이 불가능하기때문에, 업로드가 완료될 때까지 대기해아한다. 지금은 비동기처리로 해결하지만, 그 당시에는 웹 서버의 파일업로드 핸들러가 하나의 요청이 끝날 때까지 다른 요청을 대기시켜 응답 시간이 길어지거나, 서버에서 처리해야 하는 요청의 수가 증가하면 CPU나 메모리 사용량도 크게 증가하는 문제가 많이 발생했다. 
 
 - 이런 문제를 해결하기 위해 만든 것이 Node. 요청을 동시에 처리할 수 있는 비동기 입출력(Non-Blocking IO) 방식을 적용했다.
-
 - LTS : Long term Service
+
+< 입문자들의 오해 > (출처:[velopert](https://velopert.com/133)) 
+<br>
+Node는 웹서버가 아니랍니다. Node 자체로는 아무것도 하지 않습니다 – 아파치 웹서버처럼 HTML 파일 경로를 지정해주고 서버를 열고 그런 설정이 없습니다. 단, HTTP 서버를 직접 작성해야합니다 (일부 라이브러리의 도움을 받으면서). Node.js 는 그저 코드를 실행할 수 있는 하나의 방법에 불과한 그저 `JavasScript 런타임`일 뿐입니다.
+
+< 언제 node.js를 사용할까?> <br>
+
+다음과 같은 분야에 Node.js 가 사용된다면 뛰어난 효율성을 달성 할 수 있습니다.
+* 입출력이 잦은 어플리케이션
+* 데이터 스트리밍 어플리케이션
+* 데이터를 실시간으로 다루는 어플리케이션
+* JSON API 기반 어플리케이션
+* 싱글페이지 어플리케이션
+
+
+
 
 [출처](http://118k.tistory.com/204) <br>
 [LTS(Long Term Supported) 버전]
@@ -96,7 +111,22 @@ https://github.com/creationix/nvm
 
 ## Node.js REPL (Read Eval Print Loop)
 터미널에서 node를 사용하고 싶을때 
+- Read – 유저의 값을 입력 받아 JavaScript 데이터 구조로 메모리에 저장합니다.
+- Eval – 데이터를 처리`(Evaluate)` 합니다.
+- Print – 결과값을 출력합니다.
+- Loop – Read, Eval, Print 를 유저가 Ctrl+C를 두번 눌러 종료할때까지 반복합니다.
 
+### REPL
+- Ctrl+C – 현재 명령어를 종료합니다.
+- Ctrl+C (2번)  – Node REPL 을 종료합니다.
+- Ctrl+D – Node REPL을 종료합니다.
+- 위/아래 키 – 명령어 히스토리를 탐색하고 이전 - 명령어를 수정합니다.
+- Tab – 현재 입력란에 쓴 값으로 시작하는 명령어 / 변수 목록을 확인합니다.
+- .help – 모든 커맨드 목록을 확인합니다.
+- .break – 멀티 라인 표현식 입력 도중 입력을 - 종료합니다.
+- .clear – .break 와 같습니다.
+- .save filename – 현재 Node REPL 세션을 - 파일로 저장합니다.
+- .load filename – Node REPL 세션을 파일에서 불러옵니다.
 ## require
 nodejs에 내장되어있는 모듈을 사용할때 require함수를 사용해서 불러온다.
 
@@ -133,8 +163,12 @@ JavaScript 런타임은 JS를 구동하기 위해 필요한 실행 환경
 
 ## Event-driven Programming
 - 파일 읽기가 완료되었을 때 파일 시스템에서 콜백 함수를 호출하는데, 파일 시스템이 이벤트와 함께 호출하는 방식이면, 이벤트 기반 입출력 모델이라고 부른다. Event driven I/O
+- 비동기 방식으로 처리하기 위해 서로 이벤트를 전달한다.
+- 이벤트는 한쪽에서 다른 쪽으로 알림 메시지를 보내는 것과 비슷하다. 즉, '지금 이 쪽의 상태는 이렇다'는 정보를 다른 쪽으로 보내는 것이다.
 - 프로그램의 흐름이 외부 요인에 의해 일어나는 사건에 의해 결정되는 프로그래밍 양식
+- `이벤트`는 한쪽에서 다른 쪽으로 어떤 일이 발생했음을 알려주는 것이다. 이때 다른 쪽에서 이 이벤트를 받고 싶다면 `이벤트리스너`를 등록할 수 있다. 이벤트 리스너는 특정 이벤트가 전달되었을 때 그 이벤트를 처리할 수 있도록 만들어 둔 것을 말한다.
 - 마우스 입력, 키보드 입력, 다른프로그램/컴퓨터로부터의 통신
+- 옵저버 패턴에 의해 작동된다.
 
 ```js
 // DOM 이벤트 핸들러 등록 (웹 브라우저)
@@ -149,7 +183,67 @@ httpResponse.on('data', data => {
   console.log(data)
 })
 ```
+<img src ="img/08.png">
 
+- node.js에는 events모듈과 [EventEmitter](https://nodejs.org/api/events.html#events_class_eventemitter) 클래스가 내장되어있다. 이를 사용하여 이벤트와 이벤트핸들러를 연동(bind) 시킬 수 있습니다.
+```js
+// events 모듈 사용
+var events = require('events');
+
+// EventEmitter 객체 생성
+var eventEmitter = new events.EventEmitter();
+```
+
+이벤트 핸들러와 이벤트를 연동시키는건 다음과 같습니다:
+```js
+// event와 EventHandler 를 연동(bind)
+// eventName 은 임의로 설정 가능
+eventEmitter.on('eventName', eventHandler);
+```
+프로그램안에서 이벤트를 발생시킬땐 다음 코드를 사용합니다:
+```js
+eventEmitter.emit('eventName');
+```
+
+### 이벤트 핸들링 예제
+
+위에서 배운것을 토대로 이벤트를 다루는 예제를 작성해보도록 하겠습니다.
+```js
+// events 모듈 사용
+var events = require('events');
+
+// EventEmitter 객체 생성
+var eventEmitter = new events.EventEmitter();
+
+// EventHandler 함수 생성
+var connectHandler = function connected(){
+    console.log("Connection Successful");
+    
+    // data_recevied 이벤트를 발생시키기
+    eventEmitter.emit("data_received");
+}
+
+// connection 이벤트와 connectHandler 이벤트 핸들러를 연동
+eventEmitter.on('connection', connectHandler);
+
+// data_received 이벤트와 익명 함수와 연동
+// 함수를 변수안에 담는 대신에, .on() 메소드의 인자로 직접 함수를 전달
+eventEmitter.on('data_received', function(){
+    console.log("Data Received");
+});
+
+// connection 이벤트 발생시키기
+eventEmitter.emit('connection');
+
+console.log("Program has ended");
+```
+출력물
+```bash
+$ node main.js
+Connection Successful
+Data Received
+Program has ended
+```
 ## Non-blocking I/O
 - Blocking I/O는 스레드가 입력/출력이 `완료될 때까지 기다렸다가` 다음 코드를 실행
   - 중간에 멈춘다.
