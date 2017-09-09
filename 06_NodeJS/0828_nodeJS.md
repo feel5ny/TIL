@@ -161,9 +161,9 @@ JavaScript 런타임은 JS를 구동하기 위해 필요한 실행 환경
   - MongoDB
   - ...
 
-## Event-driven Programming
+## Event-driven Programming ***
 - 파일 읽기가 완료되었을 때 파일 시스템에서 콜백 함수를 호출하는데, 파일 시스템이 이벤트와 함께 호출하는 방식이면, 이벤트 기반 입출력 모델이라고 부른다. Event driven I/O
-- 비동기 방식으로 처리하기 위해 서로 이벤트를 전달한다.
+- 비동기 방식으로 처리하기 위해 `서로 이벤트를 전달한다.`
 - 이벤트는 한쪽에서 다른 쪽으로 알림 메시지를 보내는 것과 비슷하다. 즉, '지금 이 쪽의 상태는 이렇다'는 정보를 다른 쪽으로 보내는 것이다.
 - 프로그램의 흐름이 외부 요인에 의해 일어나는 사건에 의해 결정되는 프로그래밍 양식
 - `이벤트`는 한쪽에서 다른 쪽으로 어떤 일이 발생했음을 알려주는 것이다. 이때 다른 쪽에서 이 이벤트를 받고 싶다면 `이벤트리스너`를 등록할 수 있다. 이벤트 리스너는 특정 이벤트가 전달되었을 때 그 이벤트를 처리할 수 있도록 만들어 둔 것을 말한다.
@@ -184,6 +184,9 @@ httpResponse.on('data', data => {
 })
 ```
 <img src ="img/08.png">
+<img src ="img/10.jpg">
+<img src ="img/11.png">
+브라우저 환경
 
 - node.js에는 events모듈과 [EventEmitter](https://nodejs.org/api/events.html#events_class_eventemitter) 클래스가 내장되어있다. 이를 사용하여 이벤트와 이벤트핸들러를 연동(bind) 시킬 수 있습니다.
 ```js
@@ -204,8 +207,32 @@ eventEmitter.on('eventName', eventHandler);
 ```js
 eventEmitter.emit('eventName');
 ```
+EventEmitter객체에는 on()과 emit()메소드가 있다. 
+- `on(event, listener)` : 이벤트가 전달될 객체에 이벤트 리스너를 설정하는 역할을 한다. 즉, 지정한 이벤트의 리스너를 추가한다. **등록한다.**
+- `once(event, listener)` : 지정한 이벤트의 리스터를 추가하지만 한 번 실행한 후에는 자동으로 리스터가 제거된다.
+- `removeListener(event, listener)` : 지정한 이벤트에 대한 리스너를 제거한다.
+- `emit(event, listener)` : 이벤트를 다른쪽으로 전달하고 싶을 때 사용. 직접 만든 이벤트를 호출할때 사용한다.
+이미 내부적으로 EventEmitter를 상속받도록 만들어져 있어서 메소드들을 바로 사용이 가능하다.
 
 ### 이벤트 핸들링 예제
+1. 책 예제
+
+<img src ="img/09.jpg">
+
+```js
+// tick과 콜백함수 bind시킴. 
+process.on('tick',function(count){ // 2.리스너 등록
+  console.log('tick 이벤트 발생함 : %s', count);
+});
+
+setTimeout(function(){
+  console.log('2초 후에 tick 이벤트 전달 시도함.');
+  process.emit('tick',2); // 3. 등록한 이벤트 전달 , 4. 호출
+},2000);
+```
+process는 전역객체이기 때문에 EventEmitter를 이미 내부적으로 상속받을 수 있도록 만들어져서 따로 생성자함수를 사용하지 않았다.
+
+2. velopert.log 블로그 예제
 
 위에서 배운것을 토대로 이벤트를 다루는 예제를 작성해보도록 하겠습니다.
 ```js
@@ -213,6 +240,7 @@ eventEmitter.emit('eventName');
 var events = require('events');
 
 // EventEmitter 객체 생성
+// EventEmitter는 events 모듈 안에 정의되어 있다.
 var eventEmitter = new events.EventEmitter();
 
 // EventHandler 함수 생성
@@ -223,7 +251,7 @@ var connectHandler = function connected(){
     eventEmitter.emit("data_received");
 }
 
-// connection 이벤트와 connectHandler 이벤트 핸들러를 연동
+// connection 이벤트와 connectHandler 이벤트 핸들러(함수)를 연동(bind)
 eventEmitter.on('connection', connectHandler);
 
 // data_received 이벤트와 익명 함수와 연동
@@ -234,7 +262,9 @@ eventEmitter.on('data_received', function(){
 
 // connection 이벤트 발생시키기
 eventEmitter.emit('connection');
-
+// 1. connection 이벤트가 발생하면서 "Connection Successful" 출력
+// 2. connection 이벤트 마지막에서 data_received를 호출하였고, > data_received가 발생 > "Data_Received"가 출력
+// 3. 하단의 "Program has ended" 출력
 console.log("Program has ended");
 ```
 출력물
@@ -244,6 +274,8 @@ Connection Successful
 Data Received
 Program has ended
 ```
+> [이벤트 핸들러 vs 이벤트 리스너 차이점](eventHandler_vs_eventListener.md)
+
 ## Non-blocking I/O
 - Blocking I/O는 스레드가 입력/출력이 `완료될 때까지 기다렸다가` 다음 코드를 실행
   - 중간에 멈춘다.
@@ -319,7 +351,7 @@ Node.js 패키지 관리도구 + 클라우드 패키지 저장소
   },
 ```
 
-## 동시성모델
+## 동시성모델 ([참고자료](http://meetup.toast.com/posts/89), [나영정리](Asynchronous_JavaScript.md))
 프로그램이 `생애 주기가 겹치는` 여러 실행 과정을 통해 실행된다 하더라도 `프로그램의 결과에는 영향을 미치지 않는 성질`
 - 생애 주기가 겹치는 여러 실행 과정이 자원을 공유할 때` 어떻게 충돌이 생기지 않도록 할 것인가?`
 
@@ -330,7 +362,11 @@ Node.js 패키지 관리도구 + 클라우드 패키지 저장소
 
 ## 동시성을 위한 도구
 - 운영체제 차원의 도구 : Process , Thread, Mutex
-- 언어 차원의 도구 : Python - asyncion, Go-goroutine, Erlang-actor, JavaScript - 
+- 언어 차원의 도구 : Python - asyncion, Go-goroutine, Erlang-actor, JavaScript - 없다.
+
+### 장점
+- 프로그래머가 동시성에 대해 신경쓸 필요가 없어짐
+- 프로그램 작성이 쉬워짐
 
 
 ### 단점
@@ -345,12 +381,15 @@ Node.js 패키지 관리도구 + 클라우드 패키지 저장소
   - Web browser - WebAssembly
 - 긴 실행과정을 여러 개의 함수로 쪼개서 한 번의 함수 실행이 금방 끝나게 만들기
 
+# Asynchronous JavaScript
 ## Promise
-비동기 작업의 `결과`를 담는 `객체`
-`Promise.new`
-`Promise.all`
+JavaScript에서 빈번히 사용되는 비동기 처리 모델은 요청을 병렬로 처리하여 다른 요청이 blocking(작업 중단)되는 않는 장점이 있지만 단점도 가지고 있는데 그것은 여러개의 콜백함수가 순서를 보장하기 위해 nesting되어 복잡도가 높아지는 Callback Hell이다.
+- 비동기 작업의 `결과`를 담는 `객체`
+  - `Promise.new`
+  - `Promise.all`
+- Callback Hell은 코드의 가독성을 나쁘게 하고 복잡도를 증가시켜 실수를 유발시킬 확률이 높아지며 [에러 처리가 곤란하다.](http://meetup.toast.com/posts/89)
+이를 해결하기 위해 Promise가 등장했다. 
 <br>
-
 <Promise의 상태>
 - `pending`
   - 비동기 처리가 아직 수행되지 않은 상태
@@ -440,18 +479,118 @@ done!
 */
 ```
 
+Promise.all
+```js
+// npm install --save request-promise
+const rp = require('request-promise')
+const apiUrl = 'https://api.github.com'
+const option = {
+  json: true,
+  auth: {
+    'user': 'username',
+    'pass': 'password',
+  },
+  headers: {
+    'User-Agent': 'request'
+  }
+}
+
+const userPromise = rp.get(`${apiUrl}/user`, option)
+const reposPromise = rp.get(`${apiUrl}/user/repos`, option)
+const issuesPromise = rp.get(`${apiUrl}/issues`, option)
+
+// 배열 내의 모든 Promise 객체가 완료되었을 때 resolve 되는 Promise를 만든다.
+Promise.all([userPromise, reposPromise, issuesPromise])
+  .then(([user, repos, issues]) => {
+    console.log(`name: ${user.name}`)
+    console.log('repos:')
+    repos.forEach(repo => {
+      console.log(repo.name)
+    })
+    console.log(`num of assigned issues: ${issues.length}`)
+  })
+```
 
 
 ### axios
 - https://www.npmjs.com/package/axios
 
+
 ### whatwg-fetch
 https://www.npmjs.com/package/whatwg-fetch
 
 
-## Async / Await
-- 
-- 
+
+## Async / Await 
+- async들이 나오기 전에는 setTimeout 함수를 이용한 방식을 통해 편법으로 sync를 맞추기도했다.
+- Async / Await 를 사용하면, 기존 async 라이브러리나 Promise를 사용하지 않고도 비동기 콜백 지옥을 효과적으로 해결 할 수 있다. 물론 Async/Await 를 사용하려면 Promise 함수가 사용되기 때문에 사전에 Promise 사용 방법을 이해해야한다. [(참고)](http://proinlab.com/archives/2138)
+- Promise를 사용하면 비동기 함수를 순차적으로 사용 할 수 있지만, `코드의 직관성이 떨어지고 함수가 많아지면 편집이 어려워진다.` 이를 해결하기 위해서 최신 문법에서는 Async 문법을 만들어서 코드를 효율적으로 짜는 것이 가능해졌다.
+- ES2017에서 도입되어, 비동기식 코드를 동기식 코드처럼 쓸 수 있는 문법 제공
+- Chrome 55, Node.js 8.0.0 부터 사용가능
+- async function 안에서 반환된 값은 최종적으로 Promise 객체로 변환되어 반환된다.
+- async function 안에서 쓸 수 있는 await 키워드는 현재 함수를 중단시키고 Promise 객체가 충족될 때까지 기다리지만, 스레드를 block 하지 않는다.
+- 에러 처리는 동기식 코드처럼 try, catch 블록을 통해서 한다.
+
+```js
+function testPromise(callback) {
+  return new Promise((resolve, reject) => {
+    if (typeof callback === "function") {
+      console.log("1. callback is function.");
+      setTimeout(() => {
+        resolve(callback);
+      }, 2000);
+    } else if (typeof callback === "number") {
+      console.log("1. callback number is " + callback);
+      setTimeout(() => {
+        resolve(callback);
+      }, 2000);
+    } else {
+      reject("1. callback is not a function, number");
+    }
+  });
+}
+
+async function testAsync(x) {
+  var a = testPromise(20)
+  var b = testPromise(30)
+
+  return x + await a + await b
+}
+
+testAsync(50).then(result => console.log(result))
+```
+<img src ="img/14.jpg">
+매우 간단한 것들이지만 setTimeout과는 다르게 promise와 async는 명확히 앞서 하던 일들이 끝나면 다음 일을 할 수 있도록 명시해줍니다. 
+
+<다른예제>
+```js
+'use strict';
+
+let asyncFunction1 = (message)=> new Promise((resolve)=> {
+    setTimeout(()=> {
+        console.log('fn-1', message);
+        resolve('fn-1');
+    }, 1000);
+});
+
+let asyncFunction2 = (message)=> new Promise((resolve)=> {
+    setTimeout(()=> {
+        console.log('fn-2', message);
+        resolve('fn-2');
+    }, 500);
+});
+
+async function asyncMain () {
+    let data = await asyncFunction1('hello');
+    console.log(data);
+    data = await asyncFunction2('world');
+    console.log(data);
+}
+
+asyncMain();
+```
+- Async 함수는 위와 같이 정의된다. await 문법은 Async 함수 안에서만 사용이 가능하고, async 내에서라고 해도 함수 안에 선언된 경우 사용이 불가하다.
+- [(참고)](http://proinlab.com/archives/2138) Promise 개념을 이해한 후 Async / Await 문법을 잘 사용하면 순차적 작업이 필요한 단일 프로그램을 효율적으로 작성할 수 있다. 기존 다른 언어의 문법과 같이 await를 사용하면 순차적이고 직관적으로 보이게 되므로 익숙한 방식으로 비동기 문제 해결이 가능하다. 하지만 Node.js 7 버전이 아니라면 사용이 안되기 때문에 현재 LTS로 제공되는 6버전에서는 사용이 안되고, 라이브러리로 만들었을 때에는 오류를 발생시키는 원인이 될 수 있다. 또한 콜백 지옥은 피할 수 있지만, 기존 콜백의 병렬 프로세싱과 같은 장점 또한 사용이 안되므로 사용 목적에 따라 유연하게 사용해야한다. (무작정 사용하게 되면 성능 저하의 원인이 될 수 있다. 예를 들면, 웹 서버를 구축할 때 비동기 함수를 await로 사용한다면, 사용자가 동시에 접속하여 병목 현상이 발생 할 때 대응하기가 더 힘들다.) 
 
 <hr>
 
