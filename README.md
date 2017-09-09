@@ -4,11 +4,14 @@ Today I Learned
 ## Node.js &#128171;
 책과 https://seungha-kim.github.io/wpsn-handout/ 자료로 공부 후 정리한 내용입니다.
 
-| #   | 날짜     | 카테고리               | 배운 내용                                   | 실습 |
+| #   | 날짜     | 카테고리               | 배운 내용                                   | 비고 |
 | :-- | :------- | :--------------------  | :---------------------------------------  | :--- |
+| 39 | [20170908](07_자료구조)| 컴퓨터 공학 수업 | Binary Search Tree | |
+| 38 | [20170907](https://github.com/feel5ny/todoList_collabo)| todolist 과제 | axios 익히기, 토큰을 활용한 로그인구현, 협업 연습  | |
+| 37 | [20170906](06_NodeJS/0906/0906.md)| 모던 웹 서비스의 구성요소 | HTTP Cache / GraphQL / Single-page Application | |
 | 36 | [20170905](06_NodeJS/0905/0905.md)| 모던 웹 서비스의 구성요소 | Ajax / CORS / JWT / Fetch API | |
 | 35 | [20170904](06_NodeJS/0904/0904.md) | 모던 웹 서비스의 구성요소 | Express Middleware / Cookie / Session | | |
-| 34 | [20170901](06_NodeJS/0901.md) | 컴퓨터 공학 실습 | 자료구조(stack, queue), Task Runner(Gulp) |  |
+| 34 | [20170901](06_NodeJS/0901.md) | 컴퓨터 공학 수업 | 자료구조(stack, queue), Task Runner(Gulp) |  |
 | 33 | 20170831 | 처음 만나는 Node.js     | 익명게시판 실습 |  |
 | 32 | [20170830](06_NodeJS/0830/0830.md) | 처음 만나는 Node.js | Web Form / 서비스개발실습(URL shortner) | |
 | 31 | [20170829](06_NodeJS/0829/0829.md) | 처음 만나는 Node.js | HTTP / Express / Template Language |  |
@@ -19,7 +22,7 @@ Today I Learned
 ## html, css, 자바스크립트 &#127925;
 [프론트엔드 개발자를 위한 자바스크립트 프로그래밍]책과 http://poiemaweb.com/ 자료로 공부 후 정리한 내용입니다.
 
-| # | 날짜     | 카테고리               | 배운 내용                                   | 실습 |
+| # | 날짜     | 카테고리               | 배운 내용                                   | 비고 |
 | :-- | :------- | :--------------------  | :---------------------------------------  | :--- |
 | 29 | [20170825](https://github.com/feel5ny/-hackathon-N-BBang) | 해커톤 | Vanila JS 사용, HTML, CSS | |
 | 28 | [20170824]() | BookList 실습 | BookList 실습 | | 
