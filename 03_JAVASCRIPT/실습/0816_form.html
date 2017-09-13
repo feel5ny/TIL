@@ -1,0 +1,57 @@
+<!-- 자바스크립트버전, 제이커리버전 둘다 보내기 -->
+<!-- 맞는지 아닌지 체크하는 덧셈 -->
+<!-- ES6 예습 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+  <title>Document</title>
+  <style>
+  #rec  {
+    width : 100px;
+    height: 100px;
+    background-color : red;
+  }
+  </style>
+</head>
+<body>
+  <input type="text" value="" id="first"> + 
+  <input type="text" value="" id="second"> =
+  <input type="text" value="" id="result">
+  <input type="button" value="확인" id="btn">
+  
+  <script>
+    // 해당 아이디를 선택해온다.
+    var first = document.getElementById('first');
+    var second = document.getElementById('second');
+    var result = document.getElementById('result');
+    var btn = document.getElementById('btn');
+    // btn은 트리거
+
+    // 더하기 함수를 만든다..
+    function sum (first, second){ //더할 인자가 담겨있는 요소의 변수를 갖고온다. 
+      // 변수의 값들을 더한 값을 result에 값에 할당한다.
+      // first.value *= 1;
+      // second.value *= 1;
+      result.value = (first.value)*1 + (second.value)*1; 
+      return result;
+    }
+
+    // 트리거를 작동시킨다. clic을 하면 
+    btn.addEventListener("click" , function(){
+      sum(first,second);
+    });
+
+    
+
+    // var red = document.getElementById('rec');
+    
+    // red.addEventListener('mouseover', function(){
+    //   red.style.backgroundColor = 'blue';
+    // }, false);
+    
+  </script>
+</body>
+</html>

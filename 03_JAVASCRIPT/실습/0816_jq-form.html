@@ -1,0 +1,44 @@
+<!-- 자바스크립트버전, 제이커리버전 둘다 보내기 -->
+<!-- ES6 예습 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+  <title>Document</title>
+  <style>
+  #rec  {
+    width : 100px;
+    height: 100px;
+    background-color : red;
+  }
+  </style>
+</head>
+<body>
+  <input type="text" value="" id="first"> + 
+  <input type="text" value="" id="second"> =
+  <input type="text" value="" id="result">
+  <input type="button" value="확인" id="btn">
+  <div id="msg"></div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+    // 1. 버튼을 클릭하면
+      // 1.1 두 인자값을 더했을 때 맞으면 딩동댕
+        // 1.1.1 
+      // 1.2 두 인자값을 더했을 때 오류면 error
+    // 2. 메세지을 내놓는다.
+    // console.log($('#second').val());
+    $('#btn').click(function(){
+      if( ($("#first").val())*1 + ($("#second").val())*1 === ($("#result").val())*1){
+        $('#msg').text("딩동댕");
+      }else{
+        $('#msg').text("땡");
+      }
+      // console.log(($("#first").val())*1 + ($("#second").val())*1);
+      // console.log($("#result").val());
+    });
+  </script>
+</body>
+</html>
