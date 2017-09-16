@@ -5,6 +5,8 @@
 
 - 상황 : 데이터의 어떤 값들이 배열에 있는 상황
 - 변수에 배열을 할당할 때 유용하게 사용할 수 있다.
+- 배열 디스트럭처링을 위해서는 할당 연산자 왼쪽에 배열 형태의 변수 리스트가 필요하다. 
+- 중첩도 가능하다.
 
 ```js
 const data = ['feel5ny','like853','claraKim','Nayoungkim'];
@@ -73,10 +75,25 @@ console.log(imgurl);
 <hr>
 
 4. Destructuring 활용 : Event 객체전달
+- 매개변수로도 디스트럭처링하여 전달이 가능하다.
+
 ```js
+// 두번째 mbc의 newslist를 가져올 수 있다.
+// 매개변수로도 전달이 가능하다.
 function getNewsList([,{newslist}]){
   console.log(newslist);
 }
 getNewsList(news);
+```
+
+```js
+document.querySelector("div").addEventListener("click", function(e){
+  console.log(e.target); // cf_이벤트 객체이는 target 메소드가 존재한다.
+})
+// ** 이벤트 객체 내부에 있는 요소들을 중에 target이 있는 것이므로, 디스트럭처링을 하여 보다 깔끔하게 전달할 수 있다.
+document.querySelector("div").addEventListener("click", function({target}){
+  console.log(target); 
+  console.log(target.name);  // target의 tagname만 뽑겠다.
+})
 ```
 
