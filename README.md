@@ -1,6 +1,29 @@
 # TIL &#9997; &#10024;
 Today I Learned
 
+
+## React &#128172;
+| #   | 날짜     | 카테고리               | 배운 내용                                   | 비고 |
+| :-- | :------- | :--------------------  | :---------------------------------------  | :--- |
+| 45 | [2017091]()|  |  | |
+
+
+## 특강 &#128077;
+| #   | 날짜     | 카테고리               | 배운 내용                                   | 비고 |
+| :-- | :------- | :--------------------  | :---------------------------------------  | :--- |
+| 45 | [20170917]()| 몽고DB 특강 | 몽고db 특강 | |
+| 44 | [20170916]()| 웹접근성 특강 | html 메타태그, ARIA | |
+
+
+## AJAX 심화 &#128073;&#128072;
+
+| #   | 날짜     | 카테고리               | 배운 내용                                   | 비고 |
+| :-- | :------- | :--------------------  | :---------------------------------------  | :--- |
+| 43 | [20170915]()| AJAX | SPA & Routing | |
+| 42 | [20170914]()| AJAX | Simple book list app using JSON with webpack + babel + sass + express | |
+| 41 | [20170912]()| AJAX | Simple book list app using JSON with webpack + babel + sass + express | |
+| 40 | [20170911]()| AJAX |  AJAX, REST API 이론 및 실습 AJAX CRUD using JSON with webpack + babel + sass + express | |
+
 ## Node.js &#128171;
 책과 https://seungha-kim.github.io/wpsn-handout/ 자료로 공부 후 정리한 내용입니다.
 
