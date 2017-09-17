@@ -112,14 +112,44 @@ console.log(myHealth.name === previousObj.name) // true
 const healthObj = {
   showHealth : function() {
     console.log("오늘 운동시간 :" + this.healthTime)
+  },
+  setHealth : function(newTime) {
+    this.healthTime = newTime;
   }
 }
-const myHealth = Object.assign(Object.create(healthObj), {
-  healthTime : "11:20",
-  name : "crong"
-}) 
+// const myHealth =  {
+//   healthTime : "11:20",
+//   name : "crong"
+// }
 
-console.log(myHealth)
+const newobj = Object.setPrototypeOf(myHealth, healthObj) 
+// myHealth객체에 프로토타입으로 두번째 인자를 넣어달라는 뜻이다.
+// Object assign과 유사한 형태이다.
+console.log(newobj)
 ```
+[mdn 참고](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf)
+- `_`를 사용하는 것은 private한 객체임을 표시하는 것도 있으므로 사용하는걸 자제한다.
+- 
 
-## 5. Object setPrototypeOf로 객체간 prototype chain생성하기
+## 5. Object setPrototypeOf로 객체간 `prototype chain`생성하기 (다 듣지 않음)
+
+```js
+const healthObj = {
+  showHealth : function() {
+    console.log("오늘 운동시간 :" + this.healthTime)
+  },
+  setHealth : function(newTime) {
+    this.healthTime = newTime;
+  }
+}
+
+const healthChildObj = {
+  getAge : funcition(){
+    return this.age;
+  }
+}
+const childObj = Object.setPrototypeOf({
+  age : 22
+}, healthChildOvj)
+console.log(newobj)
+```
