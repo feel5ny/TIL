@@ -5,7 +5,14 @@ Today I Learned
 ## React &#128172;
 | #   | 날짜     | 카테고리               | 배운 내용                                   | 비고 |
 | :-- | :------- | :--------------------  | :---------------------------------------  | :--- |
-| 45 | [2017091]()|  |  | |
+| 53 | [20170927]()| React.js | json-server 패키지 설명 및 간단하게 외부 API 서버 구성 실습, Async Actions, 토이 외부 API와 연결한 프로젝트 | |
+| 52 | [20170926]()| React.js | Redux, React-Redux - 3 | |
+| 51 | [20170925]()| React.js | Redux, React-Redux - 2 | |
+| 50 | [20170922]()| React.js | Redux, React-Redux - 1 | |
+| 49 | [20170921](09_react/0921.md)| React.js | React Component의 생명 주기 및 외부 API와의 연동 | |
+| 48 | [20170920](09_react/0920.md)| React.js | SPA의 개념 및 Router의 필요성, React-Router에서 제공하는 API(Router, Route, Link, browserHistory) 알아보기 | |
+| 47 | [20170919](09_react/0919.md)| React.js | 외부 npm 패키지 검색 및 프로젝트에 사용 실습, Component props/Component state(Immutable)에 대한 소개 | |
+| 46 | [20170918](09_react/0918_FDS.md)| React.js | React의 기초 개념, Yarn, create_react_app, 재사용 가능한 Component만들어 보기 (jsx 맛보기) | |
 
 
 ## 특강 &#128077;
@@ -23,6 +30,7 @@ Today I Learned
 | 42 | [20170914]()| AJAX | Simple book list app using JSON with webpack + babel + sass + express | |
 | 41 | [20170912]()| AJAX | Simple book list app using JSON with webpack + babel + sass + express | |
 | 40 | [20170911]()| AJAX |  AJAX, REST API 이론 및 실습 AJAX CRUD using JSON with webpack + babel + sass + express | |
+
 
 ## Node.js &#128171;
 책과 https://seungha-kim.github.io/wpsn-handout/ 자료로 공부 후 정리한 내용입니다.
