@@ -1,14 +1,14 @@
 # TIL &#9997; &#10024;
 Today I Learned
 
-
-## React &#127916;
-| #   | 날짜     | 카테고리               | 배운 내용                                   | 비고 |
-| :-- | :------- | :--------------------  | :---------------------------------------  | :--- |
 <!-- | 53 | [20170927]()| React.js | json-server 패키지 설명 및 간단하게 외부 API 서버 구성 실습, Async Actions, 토이 외부 API와 연결한 프로젝트 | |
 | 52 | [20170926]()| React.js | Redux, React-Redux - 3 | |
 | 51 | [20170925]()| React.js | Redux, React-Redux - 2 | |
 | 50 | [20170922]()| React.js | Redux, React-Redux - 1 | | -->
+
+## React &#127916;
+| #   | 날짜     | 카테고리               | 배운 내용                                   | 비고 |
+| :-- | :------- | :--------------------  | :---------------------------------------  | :--- |
 | 49 | [20170921](09_react/0921.md)| React.js | React Component의 생명 주기 및 외부 API와의 연동 | |
 | 48 | [20170920](09_react/0920.md)| React.js | SPA의 개념 및 Router의 필요성, React-Router에서 제공하는 API(Router, Route, Link, browserHistory) 알아보기 | |
 | 47 | [20170919](09_react/0919.md)| React.js | 외부 npm 패키지 검색 및 프로젝트에 사용 실습, Component props/Component state(Immutable)에 대한 소개 | |
