@@ -1,10 +1,10 @@
 # TIL &#9997; &#10024;
 Today I Learned
-
+<img src="./09_react/img/react.svg" alt="" align="right" width="100" height="160">
 <!-- | 53 | [20170927]()| React.js | json-server 패키지 설명 및 간단하게 외부 API 서버 구성 실습, Async Actions, 토이 외부 API와 연결한 프로젝트 | |
 | 52 | [20170926]()| React.js | Redux, React-Redux - 3 | |
 | 51 | [20170925]()| React.js | Redux, React-Redux - 2 | |
-| 50 | [20170922]()| React.js | Redux, React-Redux - 1 | | -->
+-->
 
 ## React &#127916;
 | #   | 날짜     | 카테고리               | 배운 내용                                   | 비고 |
