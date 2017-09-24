@@ -9,7 +9,7 @@ Today I Learned
 ## React &#127916;
 | #   | 날짜     | 카테고리               | 배운 내용                                   | 비고 |
 | :-- | :------- | :--------------------  | :---------------------------------------  | :--- |
-| 50 | [20170922](09_react/0922.md)| React.js | Flux 디자인패턴, Redux(reducer, action, store)개념 익히기, 실습 | |
+| 50 | [20170922](09_react/0922.md)| React.js | Flux 디자인패턴, Redux(reducer, action, store)개념 익히기, 실습 | [구조도](09_react/img/실습_flow_map-01.jpg) |
 | 49 | [20170921](09_react/0921.md)| React.js | React Component의 생명 주기 및 외부 API와의 연동 | |
 | 48 | [20170920](09_react/0920.md)| React.js | SPA의 개념 및 Router의 필요성, React-Router에서 제공하는 API(Router, Route, Link, browserHistory) 알아보기 | |
 | 47 | [20170919](09_react/0919.md)| React.js | 외부 npm 패키지 검색 및 프로젝트에 사용 실습, Component props/Component state(Immutable)에 대한 소개 | |
