@@ -1,14 +1,11 @@
 # TIL &#9997; &#10024;
 Today I Learned
 <img src="./09_react/img/react.svg" alt="" align="right" width="100" height="160">
-<!-- | 53 | [20170927]()| React.js | json-server 패키지 설명 및 간단하게 외부 API 서버 구성 실습, Async Actions, 토이 외부 API와 연결한 프로젝트 | |
-| 52 | [20170926]()| React.js | Redux, React-Redux - 3 | |
-| 51 | [20170925]()| React.js | Redux, React-Redux - 2 | |
--->
 
 ## React &#127916;
 | #   | 날짜     | 카테고리               | 배운 내용                                   | 비고 |
 | :-- | :------- | :--------------------  | :---------------------------------------  | :--- |
+| 50 | [20170925](09_react/0925.md)| React.js | Redux 비동기처리관련 미들웨어 익히기(thunk), logger셋팅, reducer 분할하기 실습 |  |
 | 50 | [20170922](09_react/0922.md)| React.js | Flux 디자인패턴, Redux(reducer, action, store)개념 익히기, 실습 | [구조도](09_react/img/practice_flow_map-01.jpg) |
 | 49 | [20170921](09_react/0921.md)| React.js | React Component의 생명 주기 및 외부 API와의 연동 | |
 | 48 | [20170920](09_react/0920.md)| React.js | SPA의 개념 및 Router의 필요성, React-Router에서 제공하는 API(Router, Route, Link, browserHistory) 알아보기 | |
