@@ -5,6 +5,7 @@ Today I Learned
 ## React &#127916;
 | #   | 날짜     | 카테고리               | 배운 내용                                   | 비고 |
 | :-- | :------- | :--------------------  | :---------------------------------------  | :--- |
+| 53 | [20170927](09_react/0927.md)| React.js | firebase 파일 업로드, 투표기능 |  |
 | 52 | [20170926](09_react/0926.md)| React.js | firebase연동, 채팅앱만들기(auth, database) |  |
 | 51 | [20170925](09_react/0925.md)| React.js | Redux 비동기처리관련 미들웨어 익히기(thunk), logger셋팅, reducer 분할하기 실습 |  |
 | 50 | [20170922](09_react/0922.md)| React.js | Flux 디자인패턴, Redux(reducer, action, store)개념 익히기, 실습 | [구조도](09_react/img/practice_flow_map-01.jpg) |
