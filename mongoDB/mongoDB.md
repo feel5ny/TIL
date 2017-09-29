@@ -141,3 +141,14 @@ kitty.save(function (err) {
   }
 });
 ```
+
+## 실습
+- 몽구스는 자동으로 파일이름 뒤에 `s`를 붙인다. 
+
+> server less
+> micro service
+
+```bash
+npm i --save express@3
+```
+express 3버전이 설치된다.
