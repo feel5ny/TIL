@@ -1,0 +1,7 @@
+<h2 *ngIf="isVisible">안녕하세요</h2>
+<button (click)="toggle()">토글</button>
+
+<div *ngFor="let user of users">
+  <p>{{user.login}}</p>
+  <img [src]="user.avatar_url" width="200">
+</div>
