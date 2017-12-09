@@ -5,9 +5,9 @@ Today I Learned
 | #   | 날짜     | 카테고리               | 배운 내용                                   | 비고 |
 | :-- | :------- | :--------------------  | :---------------------------------------  | :--- |
 | 58 | [20171210](09_react/mobX/mobX.md)| 상태 라이브러리_mobX | basic |  |
-| 57 | <td colspan=4>나머지는 blog에 정리 |
-| 56 | [20171113](TypeScript/1113.md)| 타입스크립트 | basic | Type assersions, Type alias |
-| 55 | [20171108](TypeScript/1108.md)| 타입스크립트 | setting | 타입스크립트의 개요와 환경셋팅, 에디터 셋팅, 컴파일 옵션 요소들, 타입스크립트의 기본타입 |
+| 57 | 나머지는 blog에 정리 ||||
+| 56 | [20171113](TypeScript/1113.md)| 타입스크립트 | basic - Type assersions, Type alias|  |
+| 55 | [20171108](TypeScript/1108.md)| 타입스크립트 | setting - 타입스크립트의 개요와 환경셋팅, 에디터 셋팅, 컴파일 옵션 요소들, 타입스크립트의 기본타입 |  |
 | 54 | [20170929](Electron/0929.md)| 일랙트론 | electron | |
 | 53 | [20170927](09_react/0927.md)| React.js | firebase 파일 업로드, 투표기능 |  |
 | 52 | [20170926](09_react/0926.md)| React.js | firebase연동, 채팅앱만들기(auth, database) |  |
