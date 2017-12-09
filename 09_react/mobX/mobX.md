@@ -6,12 +6,25 @@
 5. 스토어를 만들고
 6. privider로 넘겨준다...
 
-
 **mobX는?**
 객체를 만드는 개념이라 로직을 짜는 느낌의 redux보다 직관적이다.
 
+--------------
 
-mobX의 특징
+## 목차
+1. mobX의 특징
+2. 후다닥 만들어보기
+3. Decorator란?
+4. Observable이란?
+5. @computed
+6. action
+7. useStrict
+8. @inject 와 Provider
+9. Reactions
+
+--------------
+
+### 1. mobX의 특징
 1. 타입스크립트로 만들어졌기 때문에 타입스크립트 친화적이다.
 2. 데코레이터를 적극 활용한다.
   - experimentalDecorators 를 true 로 설정.
@@ -30,7 +43,9 @@ mobX의 특징
 
 <img src="./mobxFlow.png">
 
-후다닥 만들어보기
+-----------
+
+### 2. 후다닥 만들어보기
 1. 타입스크립트
 `create-react-app mobx-ts-basic --scripts-version=react-scripts-ts`
 2. 데코레이터를 사용하려면 (`@`) tsconfig파일에 명시해줘야한다.
@@ -53,7 +68,7 @@ mobX의 특징
 
 -----------
 
-### Decorator란? [참고](http://blog-kr.zoyi.co/channel-frontend-decorator/)
+### 3. Decorator란? [참고](http://blog-kr.zoyi.co/channel-frontend-decorator/)
 
 선언된 클래스와 그 프로퍼티들을 디자인 시간에 변경할 수 있는 편리한 문법
 ```js
@@ -73,7 +88,7 @@ Car는 슈퍼 엔진을 가지고 있고 manufacturer는 변경할 수 없는 �
 
 ------------
 
-### Observable이란?
+### 4. Observable이란?
 ES7 스펙으로 제안되어 있는 비동기 데이터를 처리하기 위한 표준이다. 
 HTTP 요청은 비동기로 처리되기 때문에 작업이 종료되지 않은 상태라도 대기하지 않고 (Non Blocking) 다음 작업을 수행할 수 있다. 이후 서버의 응답이 도착하면 데이터를 처리하거나 화면을 갱신한다. 
 비동기 처리는 콜백함수나 프로미스, 옵저버블로 구현할 수 있다. 콜백함수를 사용하는 경우, 에러 처리가 어렵고 콜백 헬 등의 문제가 발생하므로 프로미스를 사용하는 것이 더 나은 방법이지만 프로미스는 아래와 같은 단점이 있다.
@@ -92,13 +107,13 @@ HTTP 요청은 비동기로 처리되기 때문에 작업이 종료되지 않은
 
 ---------------
 
-#### Operator
+#### 4-1. Operator
 옵저버블은 옵저버블을 생성Creating, 변환Transforming, 필터링Filtering, 오류처리 Error Handling 하는 오퍼레이터(Operator)를 사용할 수 있다. 
 
 
 -------------
 
-### observable 사용법 - 2가지 방식
+#### 4-2. observable 사용법 - 2가지 방식
 1. observable(<value>)
   - 데코레이터 없이 사용하는 방식
   - @ 없이, 함수처럼 사용해서 리턴한 객체를 사용
@@ -109,7 +124,7 @@ HTTP 요청은 비동기로 처리되기 때문에 작업이 종료되지 않은
   - `한 클래스 안에 여러개의 @observable 존재`
   - 타입스크립트는 이 방식으로 하는게 당연하겠죠!
 
-### observer 사용법 - 2가지 방식
+#### 4-3. observer 사용법 - 2가지 방식
 1. observer(<컴포넌트>);
   - 데코레이터 없이 사용하는 방식
   - SFC(stateless fucntional component) 에 붙여서 사용
@@ -134,7 +149,9 @@ const StatelessApp = observer(() => {
     2. componentWillUpdate
     3. componentDidUpdate
 
-### @computed
+--------------
+
+### 5. @computed
 observer와 비슷한 함수
 getter로 받은 값을 렌더하는 포인트를 observable과 다르게 가져갈때 쓴다.
 
@@ -154,7 +171,7 @@ getter로 받은 값을 렌더하는 포인트를 observable과 다르게 가져
       - observable 이 변했는데 computed 가 변하지 않을때 사용에 따른 차이
       computed(<함수>);
 
-### computed 사용법 - 2가지 방식
+#### 5-1. computed 사용법 - 2가지 방식
 1. 데코레이터 없이 사용하는 방식
   - 별 의미가 없다.
 2. <클래스의 getter 메서드> 에 @computed 달아서 처리
@@ -168,7 +185,9 @@ class AgeState {
 }
 ```
 
-### action
+--------------
+
+### 6. action
 action은 함수라고 생각하면 된다. 옵셔널합니다. 안써도 상관없음.
 tranjection 처리가 된다. (실패하면 다 실패됨)
 스토어 안에 2개의 observable 프로퍼티있다면 프러퍼티가 변경될때 원래는 observer도 2번 받기 때문에 2번 렌더하지만, action은 2개를 한번에 처리한다. 즉, 2번 렌더할 것을 1번만 렌더해줌.
@@ -181,14 +200,17 @@ tranjection 처리가 된다. (실패하면 다 실패됨)
   - useStrict 모드에서 observable 을 변경하는 함수가, action 을 마킹하지 않으면 런타임 에러
 - computed의 setter는 액션이다.
 
-### useStrict
+--------------
+
+### 7. useStrict
 - 최상위에서 한번 `useStrict(true)` 실행시 활성화
 - observable 값을 변경시킬 때 `action`을 사용하도록 강제
 - 무분별한 값 변경 방지 : 정돈된 코드를 쓸 수 있도록 도와준다.
 - action은 트랜잭션을 만들어주기 때문에 성능 개선 가능
 
+--------------
 
-### @inject 와 Provider
+### 8. @inject 와 Provider
 - 네, 그 프로바이더가 맞습니다.
   - 네, 그래서 컨테이너라는 개념을 사용해도 좋습니다.
   - 리덕스에서 쓴 개념과 같다.
@@ -242,7 +264,7 @@ export default App;
 ReactDOM.render(
   <Provider store={ageState}>
     <App />
-  </Provider>,
+  </Provider>
   document.getElementById('root') as HTMLElement
 );
 
@@ -264,7 +286,8 @@ class App extends React.Component<{ store?: IAgeState; }, {}> {
   }
 }
 ```
-### Reactions
+
+### 9. Reactions
 - Reactions: autorun, autorunAsync, reaction, when
 - Reactions는 MobX의 핵심 기능
 - Observable 혹은 computed 값이 변경될 때마다 실행
@@ -278,7 +301,7 @@ class App extends React.Component<{ store?: IAgeState; }, {}> {
     2. 사용 시에는 이름 붙이기
     3. 사용 후에는 반드시 제거
 
-### autorun
+#### 9-1. autorun
 변화 감지 후 log찍을 때 사용한다.
 ```js
 const number = observable(1);
