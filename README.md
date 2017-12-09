@@ -1,25 +1,14 @@
 # TIL &#9997; &#10024;
 Today I Learned
-<img src="./TypeScript/TS.png" alt="" align="right" width="80" height="80">
 
 
-## TypeScript &#9994;	
 | #   | 날짜     | 카테고리               | 배운 내용                                   | 비고 |
 | :-- | :------- | :--------------------  | :---------------------------------------  | :--- |
+| 58 | [20171210](09_react/mobX/mobX.md)| 상태 라이브러리_mobX | basic |  |
+| 57 | <td colspan=4>나머지는 blog에 정리 |
 | 56 | [20171113](TypeScript/1113.md)| 타입스크립트 | basic | Type assersions, Type alias |
 | 55 | [20171108](TypeScript/1108.md)| 타입스크립트 | setting | 타입스크립트의 개요와 환경셋팅, 에디터 셋팅, 컴파일 옵션 요소들, 타입스크립트의 기본타입 |
-
-## 특강 &#128077;
-| #   | 날짜     | 카테고리               | 배운 내용                                   | 비고 |
-| :-- | :------- | :--------------------  | :---------------------------------------  | :--- |
 | 54 | [20170929](Electron/0929.md)| 일랙트론 | electron | |
-
-<img src="./09_react/img/react.svg" alt="" align="right" width="80" height="100">
-
-## React &#127916;
-
-| #   | 날짜     | 카테고리               | 배운 내용                                   | 비고 |
-| :-- | :------- | :--------------------  | :---------------------------------------  | :--- |
 | 53 | [20170927](09_react/0927.md)| React.js | firebase 파일 업로드, 투표기능 |  |
 | 52 | [20170926](09_react/0926.md)| React.js | firebase연동, 채팅앱만들기(auth, database) |  |
 | 51 | [20170925](09_react/0925.md)| React.js | Redux 비동기처리관련 미들웨어 익히기(thunk), logger셋팅, reducer 분할하기 실습 |  |
@@ -28,30 +17,12 @@ Today I Learned
 | 48 | [20170920](09_react/0920.md)| React.js | SPA의 개념 및 Router의 필요성, React-Router에서 제공하는 API(Router, Route, Link, browserHistory) 알아보기 | |
 | 47 | [20170919](09_react/0919.md)| React.js | 외부 npm 패키지 검색 및 프로젝트에 사용 실습, Component props/Component state(Immutable)에 대한 소개 | |
 | 46 | [20170918](09_react/0918_FDS.md)| React.js | React의 기초 개념, Yarn, create_react_app, 재사용 가능한 Component만들어 보기 (jsx 맛보기) | |
-
-
-## 특강 &#128077;
-| #   | 날짜     | 카테고리               | 배운 내용                                   | 비고 |
-| :-- | :------- | :--------------------  | :---------------------------------------  | :--- |
 | 45 | [20170917]()| 몽고DB 특강 | 몽고db 특강 | |
 | 44 | [20170916]()| 웹접근성 특강 | html 메타태그, ARIA | |
-
-
-## AJAX 심화 &#128073;&#128072;
-
-| #   | 날짜     | 카테고리               | 배운 내용                                   | 비고 |
-| :-- | :------- | :--------------------  | :---------------------------------------  | :--- |
 | 43 | [20170915]()| AJAX | SPA & Routing | |
 | 42 | [20170914]()| AJAX | Simple book list app using JSON with webpack + babel + sass + express | |
 | 41 | [20170912]()| AJAX | Simple book list app using JSON with webpack + babel + sass + express | |
 | 40 | [20170911]()| AJAX |  AJAX, REST API 이론 및 실습 AJAX CRUD using JSON with webpack + babel + sass + express | |
-
-
-## Node.js &#128171;
-책과 https://seungha-kim.github.io/wpsn-handout/ 자료로 공부 후 정리한 내용입니다.
-
-| #   | 날짜     | 카테고리               | 배운 내용                                   | 비고 |
-| :-- | :------- | :--------------------  | :---------------------------------------  | :--- |
 | 39 | [20170908](07_자료구조)| 컴퓨터 공학 수업 | Binary Search Tree | |
 | 38 | [20170907](https://github.com/feel5ny/todoList_collabo)| 모던 웹 서비스의 구성요소 | todolist / axios 익히기, 토큰을 활용한 로그인구현, 협업 연습  | |
 | 37 | [20170906](06_NodeJS/0906/0906.md)| 모던 웹 서비스의 구성요소 | HTTP Cache / GraphQL / Single-page Application | |
@@ -62,14 +33,6 @@ Today I Learned
 | 32 | [20170830](06_NodeJS/0830/0830.md) | 처음 만나는 Node.js | Web Form / 서비스개발실습(URL shortner) | |
 | 31 | [20170829](06_NodeJS/0829/0829.md) | 처음 만나는 Node.js | HTTP / Express / Template Language |  |
 | 30 | [20170828](06_NodeJS/0828_nodeJS.md) | 처음 만나는 Node.js | REST API실습 / Node.js / Asynchronous Javascript | |
-
-<hr>
-
-## html, css, 자바스크립트 &#127925;
-[프론트엔드 개발자를 위한 자바스크립트 프로그래밍]책과 http://poiemaweb.com/ 자료로 공부 후 정리한 내용입니다.
-
-| # | 날짜     | 카테고리               | 배운 내용                                   | 비고 |
-| :-- | :------- | :--------------------  | :---------------------------------------  | :--- |
 | 29 | [20170825](https://github.com/feel5ny/-hackathon-N-BBang) | 해커톤 | Vanila JS 사용, HTML, CSS | |
 | 28 | [20170824]() | BookList 실습 | BookList 실습 | | 
 | 27 | [20170823](https://github.com/feel5ny/toy_practice) | BookList 실습 | JavaScript 총정리 | | 
