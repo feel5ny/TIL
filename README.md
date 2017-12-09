@@ -4,8 +4,10 @@ Today I Learned
 
 | #   | 날짜     | 카테고리               | 배운 내용                                   | 비고 |
 | :-- | :------- | :--------------------  | :---------------------------------------  | :--- |
-| 58 | [20171210](09_react/mobX/mobX.md)| 상태 라이브러리_mobX | basic |  |
-| 57 | 나머지는 blog에 정리 ||||
+| 60 | [20171210](09_react/mobX/mobX.md)| 상태 라이브러리_mobX | basic |  |
+| 59 | [20171209](Angular/2week.md)| Angular | Router, Service, Http모듈, Directive  |  |
+| 58 | [20171202](Angular/1week.md)| Angular | basic - Component, data binding |  |
+| 57 | 타입스크립트 나머지는 blog에 정리 ||||
 | 56 | [20171113](TypeScript/1113.md)| 타입스크립트 | basic - Type assersions, Type alias|  |
 | 55 | [20171108](TypeScript/1108.md)| 타입스크립트 | setting - 타입스크립트의 개요와 환경셋팅, 에디터 셋팅, 컴파일 옵션 요소들, 타입스크립트의 기본타입 |  |
 | 54 | [20170929](Electron/0929.md)| 일랙트론 | electron | |
