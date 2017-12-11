@@ -4,6 +4,9 @@ Today I Learned
 
 | #   | 날짜     | 카테고리               | 배운 내용                                   | 비고 |
 | :-- | :------- | :--------------------  | :---------------------------------------  | :--- |
+| 63 | [20171212](CS/01.md)| CS | BigO |  |
+| 62 | [20171211](database/mysql.md)| DB | basic |  |
+| 61 | [20171211](TDD/mocha)| TDD | mocha |  |
 | 60 | [20171210](09_react/mobX/mobX.md)| 상태 라이브러리_mobX | basic |  |
 | 59 | [20171209](Angular/2week.md)| Angular | Router, Service, Http모듈, Directive  |  |
 | 58 | [20171202](Angular/1week.md)| Angular | basic - Component, data binding |  |
